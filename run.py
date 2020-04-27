@@ -9,6 +9,7 @@ class Apple():
     ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'
     die = 'Your Apple ID or password was entered incorrectly.'.encode()
     inputQueue = queue.Queue()
+   
 
     def __init__(self):
 
@@ -22,9 +23,9 @@ class Apple():
         self.mailist = input("Mailing list file names ? ")
         self.thread = input("How many threads ? ")
         self.countList = len(list(open(self.mailist)))
-        self.clean = input("Clean rezult folder ? (y/n) ")
+        self.clean = input("Clean crack folder ? (y/n) ")
         if self.clean == 'y':
-            self.clean_rezult()
+            self.clean_crack()
         print('')
 
     def save_to_file(self, nameFile, x):
@@ -32,10 +33,10 @@ class Apple():
         kl.write(x)
         kl.close()
 
-    def clean_rezult(self):
-        open('rezult/live.txt', 'w').close()
-        open('rezult/die.txt', 'w').close()
-        open('rezult/unknown.txt', 'w').close()
+    def clean_crack(self):
+        open('crack/live.txt', 'w').close()
+        open('crack/die.txt', 'w').close()
+        open('crack/unknown.txt', 'w').close()
 
     def post_email(self, eml):
         try:
@@ -64,17 +65,17 @@ class Apple():
             if rez == 'die':
                 print('[+] '+time+' - DIE - '+eml +
                       ' - [Apple Email Checker - 3.0]')
-                self.save_to_file('rezult/die.txt', eml+'\n')
+                self.save_to_file('crack/die.txt', eml+'\n')
 
             elif rez == 'live':
                 print('[+] '+time+' - LIVE - '+eml +
                       ' - [Apple Email Checker - 3.0]')
-                self.save_to_file('rezult/live.txt', eml+'\n')
+                self.save_to_file('crack/live.txt', eml+'\n')
 
             elif rez == 'unknown':
                 print('[+] '+time+' - UNKNOWN - '+eml +
                       ' - [Apple Email Checker - 3.0]')
-                self.save_to_file('rezult/unknown.txt', eml+'\n')
+                self.save_to_file('crack/unknown.txt', eml+'\n')
 
             else:
                 print('contact coder')
@@ -94,9 +95,9 @@ class Apple():
         print('')
         print('Checking', self.countList, 'emails has been completed perfectly')
         print('')
-        print('Live    : ', len(list(open('rezult/live.txt'))), 'emails')
-        print('Die     : ', len(list(open('rezult/die.txt'))), 'emails')
-        print('Unknown : ', len(list(open('rezult/unknown.txt'))), 'emails')
+        print('Live    : ', len(list(open('crack/live.txt'))), 'emails')
+        print('Die     : ', len(list(open('crack/die.txt'))), 'emails')
+        print('Unknown : ', len(list(open('crack/unknown.txt'))), 'emails')
         print('')
 
 
