@@ -33,10 +33,10 @@ class Apple():
         kl.write(x)
         kl.close()
 
-    def clean_result(self):
-        open('result/live.txt', 'w').close()
-        open('result/die.txt', 'w').close()
-        open('result/unknown.txt', 'w').close()
+    def clean_crack(self):
+        open('crack/live.txt', 'w').close()
+        open('crack/die.txt', 'w').close()
+        open('crack/unknown.txt', 'w').close()
 
     def post_email(self, eml):
         try:
@@ -68,17 +68,17 @@ class Apple():
             if rez == 'die':
                 print('[+] '+time+' - DIE - '+eml +
                       ' - [Apple Email Checker]')
-                self.save_to_file('result/die.txt', eml+'\n')
+                self.save_to_file('crack/die.txt', eml+'\n')
 
             elif rez == 'live':
                 print('[+] '+time+' - LIVE - '+eml +
                       ' - [Apple Email Checker]')
-                self.save_to_file('result/live.txt', eml+'\n')
+                self.save_to_file('crack/live.txt', eml+'\n')
 
             elif rez == 'unknown':
                 print('[+] '+time+' - UNKNOWN - '+eml +
                       ' - [Apple Email Checker]')
-                self.save_to_file('result/unknown.txt', eml+'\n')
+                self.save_to_file('crack/unknown.txt', eml+'\n')
 
             else:
                 print('contact coder')
@@ -98,9 +98,9 @@ class Apple():
         print('')
         print('Checking', self.countList, 'emails has been completed successfully')
         print('')
-        print('Live    : ', len(list(open('result/live.txt'))), 'emails')
-        print('Die     : ', len(list(open('result/die.txt'))), 'emails')
-        print('Unknown : ', len(list(open('result/unknown.txt'))), 'emails')
+        print('Live    : ', len(list(open('crack/live.txt'))), 'emails')
+        print('Die     : ', len(list(open('crack/die.txt'))), 'emails')
+        print('Unknown : ', len(list(open('crack/unknown.txt'))), 'emails')
         print('')
 
 
