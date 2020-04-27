@@ -15,8 +15,8 @@ class Apple():
 
         print(r"""
  ,_,
-(O,O)	Apple Email Checker - 3.0
-(   )	mukhlis@slackerc0de.us
+(O,O)	Apple Email Checker BY ASPEK (Asep Apek)
+(   )	Marbob545@gmail.com
 -"-"--
 		""")
 
